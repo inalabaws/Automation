@@ -8,14 +8,14 @@ import java.io.File;
 
 import javax.imageio.ImageIO;
 
-public class Screenshot {
+class Screenshot {
 
 	public void takeScreenshot(String className,String message)
 	{
 		try{
 		boolean success=false;
 		
-		String dir="C:\\Users\\Administrator\\Desktop\\DhsProject\\screenshots"+className;
+		String dir="C:\\Users\\Administrator\\Desktop\\DhsProject\\screenshots\\"+className;
 		
 		File screenStoreDir= new File(dir);
 		
