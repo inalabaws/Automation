@@ -27,6 +27,12 @@ public class CreateEmployee {
 		WebDriver driver= SharedDataUtil.getDriver();
 		driver.findElement(By.xpath(".//a[@href='EmployeeServlet']")).click();
 		//Assert.assertEquals("Create Employee", driver.findElement(By.xpath(".//*[@id='content-container']/h1")).getText().trim());
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(By.xpath(".//*[@id='fname']")).sendKeys(firstName);
 		driver.findElement(By.xpath(".//*[@id='lname']")).sendKeys(lastName);	
 		driver.findElement(By.xpath(".//*[@id='email']")).sendKeys(email);
