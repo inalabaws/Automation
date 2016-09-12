@@ -11,9 +11,9 @@ public class DbConnection {
 	public static Connection conn= null;
 	public static void main(String args[]) throws SQLException
 	{
-		String url="";
-		String username="";
-		String password="";
+		String url="inaflsh.ccuinqinpyts.us-east-1.rds.amazonaws.com";
+		String username="inaflash";
+		String password="inaflash";
 		
 		try {
 			conn=DriverManager.getConnection(url, username, password);

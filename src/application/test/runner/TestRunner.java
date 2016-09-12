@@ -1,18 +1,23 @@
 package application.test.runner;
 
 import org.junit.runner.RunWith;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
- 
-@RunWith(Cucumber.class)
-@CucumberOptions(format={ "pretty","html:target/cucumber", "json:target/cucumber.json"},
-		features = "src/application/test/features/Sample.feature"
-		,glue={"src.application.main.stepDef"}
-		,dryRun = true
-		)
- 
+import org.junit.runners.Suite;
+import application.main.stepDefImpl.LoginPage;
+
+// specify a runner class: Suite.class
+@RunWith(Suite.class)
+
+// specify an array of test classes
+@Suite.SuiteClasses(
+		{
+  LoginPage.class
+  
+  }
+)
+
+// the actual class is empty
+
 public class TestRunner {
- 
 }
 
  
